@@ -4,7 +4,7 @@
 ## Brendan Nugent
 
 ## Compatible Microcontroller
-*MSP430G2553
+* MSP430G2553
 
 ## Description
 The Off-Board Blink exercise consisted of programming the MSP430G2553 to blink and LED and then removing the integrated circuit from its DIP socket.
