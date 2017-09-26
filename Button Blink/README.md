@@ -1,21 +1,23 @@
 # Button Blink
-Now that you have looked at blinking the LED from some built in delay, but what if we wanted to control the state of the LED by a button? You may think "Why would I need a Microcontroller to perform the job of a switch?". And that is where you come in. The bare minimum for this part of the lab is to essentially replicate a switch with your development board.
 
-# YOU NEED TO CREATE THE FOLLOWING FOLDERS
+## Brendan Nugent
+
+# Compatible Microcontrollers
 * MSP430G2553
 * MSP430F5529
 * MSP430FR2311
 * MSP430FR5994
 * MSP430FR6989
 
-## README
-Remember to replace this README with your README once you are ready to submit. I would recommend either making a copy of this file or taking a screen shot. There might be a copy of all of these README's in a folder on the top level depending on the exercise.
+## Description
+While in Simple Blink and Multiple Blink, an internal input was generated to toggle the LEDs, in Button Blink, the on-board button is configured and used as a switch. To turn the LED on,
+the button must be pressed and, when it is released, the LED will turn back off. To properly configure the button as a switch, the button uses a pull-up resistor. This means that, when 
+the button is not pressed, the input will be read as a high state.
 
-## Extra Work
-What can we do to make this a little bit more worthy of needing a microcontroller.
+To further this exercise, there is a program under the 'Advanced' folder which allows a user to control the speed of the LED blinking through the button.
+One button press will turn the LED on to 'slow'. A second button press will turn the LED to 'medium', and another to 'fast'. After this, the speed will loop back to 'off'.
+Further documentation exists in the source file.
 
-### Button Based Speed Control
-Much like the UART controlled speed, what if you could cycle between speeds based on a button press? The speed could progress through a cycle of "Off-Slow-Medium-Fast" looping back when you hit the end.
-
-### Color Change
-What if upon a button press, the LED which was blinking changed. Some of the development boards contain two LEDs, so you could swap between a Red and a Green LED.
+While most of the code is the same for each microcontroller, there are some slight differences. For example, while the MSP430FRxxxx family requires the programmer to turn off
+high-impedance mode, the MSP430G2553 and MSP430F5529 do not. Additionally, the pins for the LEDs, as well as for the buttons, vary between each board. This is accounted for in the code, using the correct pins
+for each microcontroller.
