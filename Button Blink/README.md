@@ -21,3 +21,6 @@ Further documentation exists in the source file.
 While most of the code is the same for each microcontroller, there are some slight differences. For example, while the MSP430FRxxxx family requires the programmer to turn off
 high-impedance mode, the MSP430G2553 and MSP430F5529 do not. Additionally, the pins for the LEDs, as well as for the buttons, vary between each board. This is accounted for in the code, using the correct pins
 for each microcontroller.
+
+## Extra Tasks
+Advanced Button Blink (Speed control)
